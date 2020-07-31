@@ -1,0 +1,42 @@
+{
+  "name": "ecart",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "NODE_ENV=test PORT=4000 PG_HOST=postgres nyc --reporter=html --reporter=text mocha --timeout 600000 --exit",
+    "test:CI": "NODE_ENV=test PORT=4000 CI_HOST=postgres nyc ./node_modules/mocha/bin/mocha test/**/*.js --timeout 600000 --exit"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.478.0",
+    "bluebird": "^3.5.4",
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "~4.16.0",
+    "express-basic-auth": "^1.2.0",
+    "express-fileupload": "^1.1.5",
+    "express-request-id": "^1.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.16.5",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "morgan": "~1.9.0",
+    "pg": "^7.10.0",
+    "raven": "^2.6.4",
+    "request-promise": "^4.2.4",
+    "uuid": "^3.3.2",
+    "validatorjs": "^3.15.1",
+    "winston": "^3.2.1",
+    "winston-loggly-bulk": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
+    "nock": "^10.0.6",
+    "nyc": "^14.0.0"
+  }
+}
