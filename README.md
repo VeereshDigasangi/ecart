@@ -1,7 +1,7 @@
 # ecart
 Requiired Sofrware
-Nodejs
-Postgres
+1. Nodejs
+2. PostgresSQL
 
 How to Run Application
 1. Create a dabase name called ecart
